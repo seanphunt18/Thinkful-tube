@@ -14,7 +14,7 @@ function displayYouTubeSearchData(data) {
   var resultElement = '';
   if (data.items) {
     data.items.forEach(function(item) {
-     resultElement += '<a target="_blank" href="https://www.youtube.com/watch?v=' + item.id.videoID + '"><img src="' + item.snippet.thumbnails.medium.url + '"></a>';
+     resultElement += '<a target="_blank" href="https://www.youtube.com/watch?v=' + item.id.videoId + '"><img src="' + item.snippet.thumbnails.medium.url + '"></a>';
     });
   }
   else {

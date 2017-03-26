@@ -12,9 +12,9 @@ function getDataFromApi(searchTerm, callback) {
 
 function displayYouTubeSearchData(data) {
   var resultElement = '';
-  if (data.Search) {
-    data.Search.forEach(function(item) {
-     resultElement += '<p>' + item.Title + '</p>';
+  if (data.items) {
+    data.items.forEach(function(item) {
+     resultElement += '<a target="_blank" href="https://www.youtube.com/watch?v=' + item.id.videoID + '"><img src="' + item.snippet.thumbnails.medium.url + '"></a>';
     });
   }
   else {

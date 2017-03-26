@@ -4,7 +4,7 @@ function getDataFromApi(searchTerm, callback) {
   var query = {
     part: 'snippet',
     key: 'AIzaSyBrbymjtMpmrh5dqI2s2vshCy6apWTZLMw',
-    q: ''
+    q: searchTerm
   }
   $.getJSON(YOUTUBE_BASE_URL, query, callback);
 }
